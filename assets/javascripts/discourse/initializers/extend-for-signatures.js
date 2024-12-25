@@ -33,6 +33,9 @@ function attachSignature(api, siteSettings) {
           ),
         ];
       } else {
+        if (!attrs.user_signature.match(/^https?:\/\//)) {
+          return;
+        }
         return [
           dec.h("hr"),
           dec.h("img.signature-img", {

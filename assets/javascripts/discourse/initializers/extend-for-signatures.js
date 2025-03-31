@@ -37,6 +37,10 @@ function attachSignature(api, siteSettings) {
         if (!attrs.user_signature.match(/^https?:\/\//)) {
           return;
         }
+        
+        const hostname = new URL(attrs.user_signature).hostname;
+        if (!["cdn.ldstatic.com", "prompt.iwooji.com", "cdn.linux.do", "linux.do"].includes(hostname)) return;
+       
         return [
           dec.h("hr"),
           dec.h("img.signature-img", {

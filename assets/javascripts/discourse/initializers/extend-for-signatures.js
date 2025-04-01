@@ -40,7 +40,7 @@ function attachSignature(api, siteSettings) {
 
         try {
           const hostname = new URL(attrs.user_signature).hostname;
-          if (!["cdn.ldstatic.com", "prompt.iwooji.com", "cdn.linux.do", "linux.do"].includes(hostname)) return;
+          if (!["cdn.ldstatic.com", "prompt.iwooji.com", "cdn.linux.do", "linux.do", "linux-do-card.0x1.site"].includes(hostname)) return;
         } catch (e) { return; }
        
         return [

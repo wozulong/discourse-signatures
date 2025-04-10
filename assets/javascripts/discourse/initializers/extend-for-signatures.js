@@ -40,7 +40,18 @@ function attachSignature(api, siteSettings) {
 
         try {
           const hostname = new URL(attrs.user_signature).hostname;
-          if (!["cdn.ldstatic.com", "prompt.iwooji.com", "cdn.linux.do", "linux.do", "linux-do-card.0x1.site"].includes(hostname)) return;
+          const allowSet = new Set([
+            "prompt.iwooji.com",
+            "linux.do",
+            "cdn.linux.do",
+            "cdn.ldstatic.com",
+            // https://github.com/zjkal/linuxdo-card
+            "linux-do-card.0x1.site",
+            // https://github.com/hanyu-dev/greeting-svg
+            "app.acfun.win",
+            "greeting.app.acfun.win",
+          ]);
+          if (!allowSet.has(hostname)) return;
         } catch (e) { return; }
        
         return [

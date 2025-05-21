@@ -43,11 +43,6 @@ function attachSignature(api, siteSettings) {
           const allowSet = new Set([
             "prompt.iwooji.com",
             "linux.do",
-            "cdn.linux.do",
-            "cdn.ldstatic.com",
-            // https://github.com/zjkal/linuxdo-card
-            "linux-do-card.0x1.site",
-            // https://github.com/hanyu-dev/greeting-svg
             "app.acfun.win",
             "greeting.app.acfun.win",
           ]);

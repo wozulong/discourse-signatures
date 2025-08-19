@@ -24,6 +24,10 @@ export default class PostSignature extends Component {
     return this.siteSettings.signatures_advanced_mode;
   }
 
+  get isCurrentSignatureAllowed() {
+    return this.isSignatureUrlAllowed(this.args.post.user_signature);
+  }
+
   isSignatureUrlAllowed(signatureUrl) {
     if (this.isAdvancedModeEnabled) {
       return true;
@@ -42,7 +46,7 @@ export default class PostSignature extends Component {
   }
 
   <template>
-    {{#if (this.isSignatureUrlAllowed @post.user_signature)}}
+    {{#if this.isCurrentSignatureAllowed}}
     <hr />
     {{#if this.isAdvancedModeEnabled}}
       <div>

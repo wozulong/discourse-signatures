@@ -53,6 +53,7 @@ function customizeWidgetPost(api, siteSettings) {
           const allowSet = new Set([
             "prompt.iwooji.com",
             "linux.do",
+            "idcflare.com",
             "app.acfun.win",
             "greeting.app.acfun.win",
           ]);

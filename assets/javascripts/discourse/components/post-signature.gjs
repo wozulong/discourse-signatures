@@ -49,6 +49,7 @@ export default class PostSignature extends Component {
   static allowedDomains = new Set([
     "prompt.iwooji.com",
     "cdn3.linux.do", 
+    "cdn3.ldstatic.com", 
     "idcflare.com",
   ]);
 
